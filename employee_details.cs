@@ -16,9 +16,9 @@ namespace ConsoleApplication9
     {
         public int emp_id { get; set; }
         public string name { get; set; }
-        public string DOB { get; set; }
+        public Nullable<System.DateTime> DOB { get; set; }
         public Nullable<int> age { get; set; }
-        public string date_of_joining { get; set; }
+        public Nullable<System.DateTime> date_of_joining { get; set; }
         public string location { get; set; }
     }
 }
