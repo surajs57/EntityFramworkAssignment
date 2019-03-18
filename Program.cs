@@ -62,11 +62,13 @@ namespace ConsoleApplication6
             {
                 foreach (var employee in datalist)
                 {
+                    DateTime birthday = Convert.ToDateTime(employee.DOB, CultureInfo.GetCultureInfo("en-US").DateTimeFormat);
+                    DateTime joining = Convert.ToDateTime(employee.DOB, CultureInfo.GetCultureInfo("en-US").DateTimeFormat);
                     employeedata.emp_id = employee.emp_id;
                     employeedata.name = employee.First_Name + " " + employee.Last_Name;
-                    employeedata.DOB = employee.DOB;
+                    employeedata.DOB = birthday;
                     employeedata.age = 35;
-                    employeedata.date_of_joining = employee.Date_of_joining;
+                    employeedata.date_of_joining = joining;
                     employeedata.location = employee.location;
 
                     using (var dbCtx = new workshopEntities())
