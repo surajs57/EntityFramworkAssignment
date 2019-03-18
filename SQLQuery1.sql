@@ -115,7 +115,7 @@ GO
 
 create table employee_details(emp_id int primary key,
 name varchar(50),
-DOB varchar(20),
+DOB date,
 age int,
-date_of_joining varchar(25),
+date_of_joining date,
 location varchar(30));
